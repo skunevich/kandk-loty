@@ -12,12 +12,7 @@ class KarateChopTwo
       if number_at_midpoint.nil?
         break
       end
-      puts number_to_find
-      puts start_index
-      puts end_index
-      puts midpoint_index
-      puts numbers.to_s
-      puts "----------------\n"
+
       if number_to_find == number_at_midpoint
         number_is_found = true
         found_index = midpoint_index
