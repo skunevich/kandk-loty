@@ -1,3 +1,4 @@
+class KarateChop	
 	def chop(int, array_of_int)
 		if array_of_int.size == 0 
 			-1;
@@ -28,3 +29,4 @@
 			return chopWithPosition(int, array_of_int, middle + 1, endPosition)
 		end
 	end
+end
