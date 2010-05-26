@@ -3,30 +3,22 @@ class KarateChop2
 		if array_of_int.size == 0 
 			-1;
 		end
-		chopWithPosition(int, array_of_int, 0, array_of_int.size-1)
-	end
-
-	def chopWithPosition(int, array_of_int, startPosition, endPosition)
-		if startPosition > endPosition 
-			return -1;
-		end
-		if startPosition == endPosition 
-			if array_of_int.at(startPosition) == int 
-				return startPosition
-			else
-				return -1;
+		small = 0
+		large = array_of_int.size
+		while true
+			if small >= large
+				return -1
 			end
-		end
-
-		middle = (startPosition + endPosition) / 2
-		value = array_of_int.at(middle)
-		if value == int 
-			return middle
-		end
-		if value > int
-			return chopWithPosition(int, array_of_int, startPosition, middle)
-		else
-			return chopWithPosition(int, array_of_int, middle + 1, endPosition)
+			middle = (small + large) / 2
+			if int == array_of_int.at(middle)
+				return middle
+			end
+			if int < array_of_int.at(middle)
+				large = middle
+			end
+			if int > array_of_int.at(middle)
+				small = middle + 1
+			end
 		end
 	end
 end
