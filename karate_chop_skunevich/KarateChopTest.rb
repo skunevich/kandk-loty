@@ -1,6 +1,7 @@
     require 'test/unit'
 	require 'KarateChop'
 	require 'KarateChop2'
+	require 'KarateChop3'
 
     class KarateChop_Test < Test::Unit::TestCase
       # def setup
@@ -15,6 +16,10 @@
 	  
 	  def test_KarateChop2
 		chop_chop KarateChop2.new
+	  end
+	  
+	  def test_KarateChop3
+		chop_chop KarateChop3.new
 	  end
 	  
 	  def chop_chop(chopper)
